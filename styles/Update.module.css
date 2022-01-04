@@ -1,0 +1,103 @@
+
+
+.updateWrapper{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.updateContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+}
+
+.subsection{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* width: 100vw; */
+}
+
+.subsection>p{
+    margin-right: 20px;
+    align-self: flex-end;
+    width: fit-content;
+}
+
+.formWrapper{
+    width: 80vw;
+}
+
+.textField{
+    max-width: 400px;
+    margin-bottom: 5px;
+}
+
+.heading{
+    color: rgb(128, 128, 128);
+    font-weight: 700;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.subsubsection{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+.button{
+    align-self: flex-end;
+}
+
+.smallBox{
+    box-sizing: border-box;
+}
+
+.startDate{
+    /* margin-right: 10px; */
+}
+
+@media only screen and (max-width: 420px) {
+    .form{
+        display: flex;
+        width: 90vw;
+        flex-direction: column;
+        /* justify-content: center; */
+        /* align-items: center; */
+        /* margin-left: 5vw; */
+    }
+    
+    .textField {
+        width: 90vw;
+    }
+
+    .heading{
+        margin-left: 5px;
+        margin-top: 20px;
+    }
+
+    .smallContainer{
+        width: 90vw;
+    }
+
+    .smallBox{
+        width: calc(50% - 2px);
+    }
+
+    .startDate{
+        margin-right: 4px;
+    }
+}
+  
+
+@media only screen and (min-width: 420px) and (max-width: 768px){
+    .textField{
+        width: 75vw;
+    }
+}
