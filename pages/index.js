@@ -6,13 +6,14 @@ import Header from '../components/Header/Header'
 import styles from '../styles/Home.module.css'
 import Button from '@mui/material/Button'
 import TextField from '@mui/material/TextField'
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import Topbar from '../components/Topbar/Topbar'
+import { Context } from '../context/Context'
 
 export default function Home() {
   const handle = () => {
   }
-
+  const { dispatch, school, company, certificate } = useContext(Context)
   const [values, setValues] = useState(json);
 
   return (
@@ -22,7 +23,7 @@ export default function Home() {
         <div className={styles.cardWrapper}>
 
           <h4 className={styles.cardHeading}>SCHOOL DETAILS</h4>
-          {values.school.map(e => {
+          {school.map(e => {
             return (
               <div className={styles.cardSection}>
                 <div key={e.key}>
