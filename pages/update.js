@@ -25,6 +25,7 @@ export default function Update() {
                                 <TextField className={styles.textField + " " + styles.smallBox + " " + styles.startDate} label="From"></TextField>
                                 <TextField className={styles.textField + " " + styles.smallBox} label="To"></TextField>
                             </div>
+                            <Button variant='outlined'>ADD</Button>
                         </div>
                     </div>
                 </div>
@@ -45,12 +46,13 @@ export default function Update() {
                                 <TextField className={styles.textField + " " + styles.smallBox + " " + styles.startDate} label="Worked From"></TextField>
                                 <TextField className={styles.textField + " " + styles.smallBox} label="To"></TextField>
                             </div>
+                            <Button variant='outlined'>ADD</Button>
                         </div>
                     </div>
                 </div>
 
                 <div className={styles.form}>
-                    <p className={styles.heading}>SKILLS</p>
+                    <p className={styles.heading}>CERTIFICATION</p>
                     <div className={styles.subsection}>
                         <TextField className={styles.textField} label="Enter Certification"></TextField>
                         <Button variant='outlined' className={styles.button}>ADD</Button>
@@ -58,9 +60,17 @@ export default function Update() {
                 </div>
 
                 <div className={styles.form}>
+                    <p className={styles.heading}>SKILLS</p>
+                    <div className={styles.subsection}>
+                        <TextField className={styles.textField} label="Enter Skills"></TextField>
+                        <Button variant='outlined' className={styles.button}>ADD</Button>
+                    </div>
+                </div>
+
+                <div className={styles.form}>
                     <p className={styles.heading}>INTERESTS</p>
                     <div className={styles.subsection}>
-                        <TextField className={styles.textField} label="Enter Certification"></TextField>
+                        <TextField className={styles.textField} label="Enter Interests"></TextField>
                         <Button variant='outlined'>ADD</Button>
                     </div>
                 </div>

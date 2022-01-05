@@ -1,7 +1,7 @@
 
 
 .updateWrapper{
-    width: 100vw;
+    /* width: 100vw; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,7 +33,6 @@
 }
 
 .textField{
-    max-width: 400px;
     margin-bottom: 5px;
 }
 
@@ -97,7 +96,59 @@
   
 
 @media only screen and (min-width: 420px) and (max-width: 768px){
+    .form{
+        display:flex;
+        width: 70vw;
+        flex-direction: column;
+    }
+    
     .textField{
-        width: 75vw;
+        width: 70vw;
+    }
+
+    .heading{
+        margin-left: 5px;
+        margin-top: 20px;
+    }
+
+    .smallContainer{
+        width: 70vw;
+    }
+
+    .smallBox{
+        width: calc(50% - 2px);
+    }
+
+    .smallBox{
+        margin-right: 2px;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .form{
+        display:flex;
+        width: 400px;
+        flex-direction: column;
+    }
+    
+    .textField{
+        width: 400px;
+    }
+
+    .heading{
+        margin-left: 5px;
+        margin-top: 20px;
+    }
+
+    .smallContainer{
+        width: 400px;
+    }
+
+    .smallBox{
+        width: 198px;
+    }
+
+    .smallBox{
+        margin-right: 2px;
     }
 }
