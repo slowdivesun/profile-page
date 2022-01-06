@@ -50,23 +50,28 @@ export default function Home() {
         </div>
 
         <div className={styles.cardWrapper}>
-          <div className={styles.cardSection}>
-            <h4 className={styles.cardHeading}>COMPANY DETAILS</h4>
-            <div>
-              <div className={styles.cardSubheading}>
-                <span className={styles.spanLeft}>POSITION: </span>
-                <span>Systems Engineer</span>
+          <h4 className={styles.cardHeading}>COMPANY DETAILS</h4>
+          {company.map(e => {
+            return (
+              <div>
+                <div className={styles.cardSection}>
+                  <div className={styles.cardSubheading}>
+                    <span className={styles.spanLeft}>POSITION: </span>
+                    <span>{e.position}</span>
+                  </div>
+                  <div className={styles.cardSubheading}>
+                    <span className={styles.spanLeft}>NAME: </span>
+                    <span>{e.name}</span>
+                  </div>
+                  <div className={styles.cardSubheading}>
+                    <span className={styles.spanLeft}>WORKED: </span>
+                    <span>{e.from} to {e.to}</span>
+                  </div>
+                </div>
               </div>
-              <div className={styles.cardSubheading}>
-                <span className={styles.spanLeft}>NAME: </span>
-                <span>Company.In</span>
-              </div>
-              <div className={styles.cardSubheading}>
-                <span className={styles.spanLeft}>WORKED: </span>
-                <span>2019 to present</span>
-              </div>
-            </div>
-          </div>
+            )
+          })}
+
         </div>
 
 
