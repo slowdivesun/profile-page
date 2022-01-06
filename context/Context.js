@@ -56,6 +56,7 @@ export const ContextProvider = ({ children }) => {
             certificates: state.certificates,
             skills: state.skills,
             interests: state.interests,
+            info: state.info,
             dispatch,
         }}>
             {children}

@@ -2,6 +2,7 @@
     width: 30px;
     height: 30px;
     border-radius: 50%;
+    margin-left: 20px;
 }
 
 .topContainer{
@@ -21,4 +22,13 @@
 .logo{
     align-self: center;
     margin-left: 20px;
+}
+
+.profile{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: rgb(90, 90, 182);
+    line-height: 10px;
 }

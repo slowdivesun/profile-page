@@ -13,7 +13,7 @@ import { Context } from '../context/Context'
 export default function Home() {
   const handle = () => {
   }
-  const { dispatch, school, company, certificates, skills, interests } = useContext(Context)
+  const { dispatch, school, company, certificates, skills, interests, info } = useContext(Context)
   const [values, setValues] = useState(json);
 
   return (
