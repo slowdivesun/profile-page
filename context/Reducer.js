@@ -28,6 +28,13 @@ const Reducer = (state, action) => {
                     ...state.skills, action.payload.skills
                 ]
             };
+        case "ADD_INTERESTS":
+            return {
+                ...state,
+                interests: [
+                    ...state.interests, action.payload.interests
+                ]
+            };
         default:
             return state
     }

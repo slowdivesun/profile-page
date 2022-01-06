@@ -5,6 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image: linear-gradient(45deg, #df9bdd, #86b1df);
 }
 
 .updateContainer{
@@ -13,6 +14,9 @@
     justify-content: center;
     align-items: center;
     width: auto;
+    padding: 0 20px;
+    background-color: #fff;
+    border-radius: 10px;
 }
 
 .subsection{
