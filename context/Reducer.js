@@ -17,8 +17,15 @@ const Reducer = (state, action) => {
         case "ADD_CERTIFICATE":
             return {
                 ...state,
-                certificate: [
-                    ...state.certificate, action.payload.certificate
+                certificates: [
+                    ...state.certificates, action.payload.certificates
+                ]
+            };
+        case "ADD_SKILLS":
+            return {
+                ...state,
+                skills: [
+                    ...state.skills, action.payload.skills
                 ]
             };
         default:

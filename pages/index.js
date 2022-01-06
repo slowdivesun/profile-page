@@ -13,7 +13,7 @@ import { Context } from '../context/Context'
 export default function Home() {
   const handle = () => {
   }
-  const { dispatch, school, company, certificate } = useContext(Context)
+  const { dispatch, school, company, certificates, skills, interests } = useContext(Context)
   const [values, setValues] = useState(json);
 
   return (
@@ -21,7 +21,6 @@ export default function Home() {
       <Topbar />
       <div className={styles.cardContainer}>
         <div className={styles.cardWrapper}>
-
           <h4 className={styles.cardHeading}>SCHOOL DETAILS</h4>
           {school.map(e => {
             return (
@@ -33,11 +32,11 @@ export default function Home() {
                   </div>
                   <div className={styles.cardSubheading}>
                     <span className={styles.spanLeft}>NAME: </span>
-                    <span>{e.Name}</span>
+                    <span>{e.name}</span>
                   </div>
                   <div className={styles.cardSubheading}>
                     <span className={styles.spanLeft}>ATTENDED: </span>
-                    <span>{e.From} to {e.To}</span>
+                    <span>{e.from} to {e.to}</span>
                   </div>
                   <div className={styles.cardSubheading}>
                     <span className={styles.spanLeft}>PERCENTAGE / CGPA: </span>
@@ -73,41 +72,28 @@ export default function Home() {
 
         <div className={styles.cardWrapper}>
           <h4 className={styles.cardHeading}>CERTIFICATES</h4>
-          <div className={styles.cardSection}>
-            <div className={styles.singleLine}>
-              <p>Certificate 1</p>
-            </div>
-          </div>
-          <div className={styles.cardSection}>
-            <div className={styles.singleLine}>
-              <p>Certificate 2</p>
-            </div>
-          </div>
+          {certificates.map(e => {
+            return (
+              <div className={styles.cardSection}>
+                <div className={styles.singleLine}>
+                  <p>{e}</p>
+                </div>
+              </div>
+            )
+          })}
         </div>
 
         <div className={styles.cardWrapper}>
           <h4 className={styles.cardHeading}>SKILLS</h4>
           <div className={styles.cardLeftRight}>
-            <div className={styles.cardSection}>
-              <div className={styles.singleTab}>
-                <p>HTML</p>
-              </div>
-            </div>
-            <div className={styles.cardSection}>
-              <div className={styles.singleTab}>
-                <p>CSS</p>
-              </div>
-            </div>
-            <div className={styles.cardSection}>
-              <div className={styles.singleTab}>
-                <p>React JS</p>
-              </div>
-            </div>
-            <div className={styles.cardSection}>
-              <div className={styles.singleTab}>
-                <p>Node JS</p>
-              </div>
-            </div>
+            {skills.map(e => {
+              return (
+                <div className={styles.cardSection}>
+                  <div className={styles.singleTab}>
+                    <p>{e}</p>
+                  </div>
+                </div>)
+            })}
           </div>
           <div className={styles.cardLeftRight}>
 
@@ -118,29 +104,17 @@ export default function Home() {
         <div className={styles.cardWrapper}>
           <h4 className={styles.cardHeading}>INTERESTS</h4>
           <div className={styles.cardLeftRight}>
-            <div className={styles.cardSection}>
-              <div className={styles.singleTab}>
-                <p>Web</p>
-              </div>
-            </div>
-            <div className={styles.cardSection}>
-              <div className={styles.singleTab}>
-                <p>Networking</p>
-              </div>
-            </div>
-            <div className={styles.cardSection}>
-              <div className={styles.singleTab}>
-                <p>ML</p>
-              </div>
-            </div>
-            <div className={styles.cardSection}>
-              <div className={styles.singleTab}>
-                <p>DL</p>
-              </div>
-            </div>
+            {interests.map(e => {
+              return (
+                <div className={styles.cardSection}>
+                  <div className={styles.singleTab}>
+                    <p>{e}</p>
+                  </div>
+                </div>
+              )
+            })}
           </div>
           <div className={styles.cardLeftRight}>
-
           </div>
         </div>
         <Link href="/update">

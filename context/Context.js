@@ -4,29 +4,37 @@ import Reducer from "./Reducer";
 const INITIAL_STATE = {
     school: [
         {
-            "key": 1,
-            "major": "Computer Science and Engineering",
-            "Name": "Indian Institute of Technology, Jodhpur",
-            "From": "2019",
-            "To": "2023"
+            key: 1,
+            major: "Computer Science and Engineering",
+            name: "Indian Institute of Technology, Jodhpur",
+            from: "2019",
+            to: "2023"
         },
         {
-            "key": 2,
-            "major": "Maths",
-            "Name": "CHBS",
-            "From": "2015",
-            "To": "2019"
+            key: 2,
+            major: "Maths",
+            name: "CHBS",
+            from: "2015",
+            to: "2019"
         }
     ],
-    company: {
-        "position": "Systems Engineer",
-        "Name": "Company.In",
-        "From": "2019",
-        "To": "Present"
-    },
+    company: [
+        {
+            position: "Systems Engineer",
+            name: "Company.In",
+            from: "2019",
+            to: "Present"
+        },
+    ],
     certificates: [
         "Certificate 1",
         "Certificate 2"
+    ],
+    skills: [
+        "HTML", "CSS", "Node JS", "React JS"
+    ],
+    interests: [
+        "Web", "Networking", "ML", "DL"
     ]
 }
 
@@ -40,7 +48,9 @@ export const ContextProvider = ({ children }) => {
         <Context.Provider value={{
             school: state.school,
             company: state.company,
-            certificate: state.certificate,
+            certificates: state.certificates,
+            skills: state.skills,
+            interests: state.interests,
             dispatch,
         }}>
             {children}
