@@ -124,7 +124,7 @@ export default function Home() {
         </div>
         <Link href="/update">
           <Button className={styles.btn} variant='outlined' onClick={handle} sx={{
-            "padding": "10px 0",
+            "margin": "10px 0",
             "backgroundColor": "white"
           }}>UPDATE</Button>
         </Link>
