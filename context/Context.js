@@ -5,7 +5,7 @@ const INITIAL_STATE = {
     info: {
         name: "Shivam Kumar",
         email: "shivam.gup82@gmail.com",
-        mobile: "9999999999"
+        mobile: "+91 9999999999"
     },
     school: [
         {
