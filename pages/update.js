@@ -15,6 +15,7 @@ export default function Update() {
     const [company, setCompany] = useState({});
     const [certificates, setCertificates] = useState([]);
     const [skills, setSkills] = useState([]);
+    const [interests, setInterests] = useState([]);
 
     const handleSchool = (e) => {
         e.preventDefault();
@@ -37,6 +38,7 @@ export default function Update() {
                 company
             }
         })
+        e.target.reset();
     }
 
     const handleCertificate = (e) => {
@@ -48,6 +50,7 @@ export default function Update() {
                 certificates
             }
         })
+        e.target.reset();
     }
 
     const handleSkills = (e) => {
@@ -59,6 +62,20 @@ export default function Update() {
                 skills
             }
         })
+        console.log(skills)
+        e.target.reset();
+    }
+
+    const handleInterests = (e) => {
+        e.preventDefault();
+        setSkills(interests);
+        dispatch({
+            type: "ADD_INTERESTS",
+            payload: {
+                interests
+            }
+        })
+        e.target.reset();
     }
 
     return (
@@ -123,18 +140,20 @@ export default function Update() {
                     <p className={styles.heading}>SKILLS</p>
                     <form onSubmit={handleSkills}>
                         <div className={styles.subsection}>
-                            <TextField className={styles.textField} label="Enter Skills" onChange={e => { setSkills(skills => (e.target.value)) }}></TextField>
-                            <Button variant='outlined' className={styles.button}>ADD</Button>
+                            <TextField className={styles.textField} label="Enter Skills" onChange={e => { setSkills((e.target.value)) }}></TextField>
+                            <Button variant='outlined' className={styles.button} type='submit'>ADD</Button>
                         </div>
                     </form>
                 </div>
 
                 <div className={styles.form}>
                     <p className={styles.heading}>INTERESTS</p>
-                    <div className={styles.subsection}>
-                        <TextField className={styles.textField} label="Enter Interests"></TextField>
-                        <Button variant='outlined'>ADD</Button>
-                    </div>
+                    <form onSubmit={handleInterests}>
+                        <div className={styles.subsection}>
+                            <TextField className={styles.textField} label="Enter Interests" onChange={e => { setInterests((e.target.value)) }}></TextField>
+                            <Button variant='outlined' className={styles.button} type="submit">ADD</Button>
+                        </div>
+                    </form>
                 </div>
             </div >
         </div >

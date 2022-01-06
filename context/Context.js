@@ -2,6 +2,11 @@ import { createContext, useEffect, useReducer } from "react"
 import Reducer from "./Reducer";
 
 const INITIAL_STATE = {
+    info: {
+        name: "Shivam Kumar",
+        email: "shivam.gup82@gmail.com",
+        mobile: "9999999999"
+    },
     school: [
         {
             key: 1,
