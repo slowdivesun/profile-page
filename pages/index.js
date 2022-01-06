@@ -123,7 +123,10 @@ export default function Home() {
           </div>
         </div>
         <Link href="/update">
-          <Button className={styles.btn} variant='outlined' onClick={handle}>UPDATE</Button>
+          <Button className={styles.btn} variant='outlined' onClick={handle} sx={{
+            "padding": "10px 0",
+            "backgroundColor": "white"
+          }}>UPDATE</Button>
         </Link>
       </div>
     </div >
