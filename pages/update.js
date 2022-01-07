@@ -117,7 +117,7 @@ export default function Update() {
                             <div className={styles.subsection}>
                                 {/* <p>Attended</p> */}
                                 <div className={styles.smallContainer}>
-                                    <TextField sx={{"marginBottom":"5px"}} className={styles.textField + " " + styles.smallBox + " " + styles.startDate} label="Worked From" onChange={e => { setCompany(company => ({ ...company, "from": e.target.value })) }}></TextField>
+                                    <TextField sx={{"marginBottom":"5px", "marginRight": "2px"}} className={styles.textField + " " + styles.smallBox + " " + styles.startDate} label="Worked From" onChange={e => { setCompany(company => ({ ...company, "from": e.target.value })) }}></TextField>
                                     <TextField sx={{"marginBottom":"5px"}} className={styles.textField + " " + styles.smallBox} label="To" onChange={e => { setCompany(company => ({ ...company, "to": e.target.value })) }}></TextField>
                                 </div>
                                 <Button variant='outlined' type="submit">ADD</Button>
