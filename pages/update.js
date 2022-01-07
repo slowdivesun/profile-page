@@ -87,15 +87,15 @@ export default function Update() {
                         <div>
                             <div className={styles.subsection}>
                                 <div>
-                                    <TextField className={styles.textField} label="School Name" onChange={e => { setSchool(school => ({ ...school, "name": e.target.value })) }}></TextField>
-                                    <TextField className={styles.textField} label="Specialization" onChange={e => { setSchool(school => ({ ...school, "major": e.target.value })) }}></TextField>
+                                    <TextField sx={{"marginBottom":"5px"}} className={styles.textField} label="School Name" onChange={e => { setSchool(school => ({ ...school, "name": e.target.value })) }}></TextField>
+                                    <TextField sx={{"marginBottom":"5px"}} className={styles.textField} label="Specialization" onChange={e => { setSchool(school => ({ ...school, "major": e.target.value })) }}></TextField>
                                 </div>
                             </div>
 
                             <div className={styles.subsection}>
                                 <div className={styles.smallContainer}>
-                                    <TextField className={styles.textField + " " + styles.smallBox + " " + styles.startDate} label="From" onChange={e => { setSchool(school => ({ ...school, "from": e.target.value })) }}></TextField>
-                                    <TextField className={styles.textField + " " + styles.smallBox} label="To" onChange={e => { setSchool(school => ({ ...school, "to": e.target.value })) }}></TextField>
+                                    <TextField sx={{"marginBottom":"5px"}} className={styles.textField + " " + styles.smallBox + " " + styles.startDate} label="From" onChange={e => { setSchool(school => ({ ...school, "from": e.target.value })) }}></TextField>
+                                    <TextField sx={{"marginBottom":"5px"}} className={styles.textField + " " + styles.smallBox} label="To" onChange={e => { setSchool(school => ({ ...school, "to": e.target.value })) }}></TextField>
                                 </div>
                                 <Button variant='outlined' type='submit'>ADD</Button>
                             </div>
@@ -110,15 +110,15 @@ export default function Update() {
                             <div className={styles.subsection}>
                                 {/* <p>Details</p> */}
                                 <div>
-                                    <TextField className={styles.textField} label="Name" onChange={e => { setCompany(company => ({ ...company, "name": e.target.value })) }}></TextField>
-                                    <TextField className={styles.textField} label="Position" onChange={e => { setCompany(company => ({ ...company, "position": e.target.value })) }}></TextField>
+                                    <TextField sx={{"marginBottom":"5px"}} className={styles.textField} label="Name" onChange={e => { setCompany(company => ({ ...company, "name": e.target.value })) }}></TextField>
+                                    <TextField sx={{"marginBottom":"5px"}} className={styles.textField} label="Position" onChange={e => { setCompany(company => ({ ...company, "position": e.target.value })) }}></TextField>
                                 </div>
                             </div>
                             <div className={styles.subsection}>
                                 {/* <p>Attended</p> */}
                                 <div className={styles.smallContainer}>
-                                    <TextField className={styles.textField + " " + styles.smallBox + " " + styles.startDate} label="Worked From" onChange={e => { setCompany(company => ({ ...company, "from": e.target.value })) }}></TextField>
-                                    <TextField className={styles.textField + " " + styles.smallBox} label="To" onChange={e => { setCompany(company => ({ ...company, "to": e.target.value })) }}></TextField>
+                                    <TextField sx={{"marginBottom":"5px"}} className={styles.textField + " " + styles.smallBox + " " + styles.startDate} label="Worked From" onChange={e => { setCompany(company => ({ ...company, "from": e.target.value })) }}></TextField>
+                                    <TextField sx={{"marginBottom":"5px"}} className={styles.textField + " " + styles.smallBox} label="To" onChange={e => { setCompany(company => ({ ...company, "to": e.target.value })) }}></TextField>
                                 </div>
                                 <Button variant='outlined' type="submit">ADD</Button>
                             </div>
@@ -130,7 +130,7 @@ export default function Update() {
                     <p className={styles.heading}>CERTIFICATION</p>
                     <form onSubmit={handleCertificate}>
                         <div className={styles.subsection}>
-                            <TextField className={styles.textField} label="Enter Certification" onChange={e => { setCertificates(certificates => (e.target.value)) }}></TextField>
+                            <TextField sx={{"marginBottom":"5px"}} className={styles.textField} label="Enter Certification" onChange={e => { setCertificates(certificates => (e.target.value)) }}></TextField>
                             <Button variant='outlined' className={styles.button} type="submit">ADD</Button>
                         </div>
                     </form>
@@ -140,7 +140,7 @@ export default function Update() {
                     <p className={styles.heading}>SKILLS</p>
                     <form onSubmit={handleSkills}>
                         <div className={styles.subsection}>
-                            <TextField className={styles.textField} label="Enter Skills" onChange={e => { setSkills((e.target.value)) }}></TextField>
+                            <TextField sx={{"marginBottom":"5px"}} className={styles.textField} label="Enter Skills" onChange={e => { setSkills((e.target.value)) }}></TextField>
                             <Button variant='outlined' className={styles.button} type='submit'>ADD</Button>
                         </div>
                     </form>
@@ -150,7 +150,7 @@ export default function Update() {
                     <p className={styles.heading}>INTERESTS</p>
                     <form onSubmit={handleInterests}>
                         <div className={styles.subsection}>
-                            <TextField className={styles.textField} label="Enter Interests" onChange={e => { setInterests((e.target.value)) }}></TextField>
+                            <TextField sx={{"marginBottom":"5px"}} className={styles.textField} label="Enter Interests" onChange={e => { setInterests((e.target.value)) }}></TextField>
                             <Button variant='outlined' className={styles.button} type="submit">ADD</Button>
                         </div>
                     </form>
